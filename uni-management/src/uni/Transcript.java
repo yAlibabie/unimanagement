@@ -33,7 +33,6 @@ public class Transcript {
         double totalGradePoints = 0;
         int totalUnits = 0;
         for (Integer courseID : transcript.keySet()) {
-            Course course = Course.findById(courseID);
             totalGradePoints += transcript.get(courseID) * course.units;
             totalUnits += course.units;
         }
